@@ -23,7 +23,7 @@ console.log(addForm);
 
     if(response.status ==201){
       loader.classList.add("d-none");
-        Swal.fire({
+        await Swal.fire({
         title: "Added Successfully",
         icon: "success",
         draggable: true
