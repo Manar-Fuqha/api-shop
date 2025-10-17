@@ -117,7 +117,7 @@ loader.classList.add("d-none");
       text: "Your file has been deleted.",
       icon: "success"
     });
-   location.href = '/index.html';
+   location.href = './index.html';
   }
     
   }
