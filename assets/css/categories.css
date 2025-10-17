@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+.category{
+    transition: background-color .4s;
+}
+.category:hover{
+    background-color: #6996976d;
+}
+/* .section-title{
+     font-family: "Instrument Serif", serif;
+} */

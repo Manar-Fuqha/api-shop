@@ -1,0 +1,21 @@
+.swiper img {
+  /* width: 600px; */
+  height: 50vh;
+  /* background-color: antiquewhite; */
+}
+.swiper-button-next, .swiper-button-prev{
+     
+    width: 15px;
+    color: #0000005e;
+}
+
+/* .reviews .swiper-slide {
+  width: 70%; 
+} */
+
+.reviews .card {
+  width: 70%; 
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
