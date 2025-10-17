@@ -2,6 +2,16 @@
 
 const loader = document.querySelector(".loader");
 
+const showStars=()=> {
+  const maxStars = 5;
+  const starContainers = document.querySelectorAll(".stars-outer");
+
+  starContainers.forEach(container => {
+    const rating = parseFloat(container.dataset.rating);
+    const starPercentage = (rating / maxStars) * 100;
+    container.querySelector(".stars-inner").style.width = `${starPercentage}%`;
+  });
+}
 
 
 const navLinks = Array.from(document.querySelectorAll(".nav-link"));
@@ -61,7 +71,9 @@ const displayProducts =async()=>{
                         <p class="card-text flex-grow-1">${product.description}</p>
                         <div class="info d-flex justify-content-between pb-3">
                             <span class="product-price fw-semibold" >${product.price}$</span>
-                            <span>${product.rating}</span>
+                            <div class="stars-outer" data-rating="${product.rating}">
+              <div class="stars-inner"></div>
+            </div>
                         </div>
                         
                         <a href="./productDetails.html?productId=${product.id}" class="btn btn-primary d-flex justify-content-center mt-2 mt-auto">See Product</a>
@@ -70,7 +82,8 @@ const displayProducts =async()=>{
                 </div>`
     }).join(' ');
     document.querySelector(".get-products").innerHTML=result + `<a class="mb-3 fw-bold text-decoration-none  pt-3 mt-auto" style="color : #2e7376" href="./products.html">Browse All Products</a>`;
-loader.classList.add("d-none");
+showStars();
+    loader.classList.add("d-none");
 }
 
 displayProducts();
