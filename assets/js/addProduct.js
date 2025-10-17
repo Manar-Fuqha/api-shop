@@ -28,6 +28,8 @@ console.log(addForm);
         icon: "success",
         draggable: true
         });
+        location.href = './index.html';
     }
+    addForm.reset();
     
 })
